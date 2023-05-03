@@ -12,7 +12,7 @@ public class GoodsController {
     @RequestMapping("/goods/test")
     @ResponseBody
     public String test() {
-        log.info("github commit  running test()");
+        log.info("github commit running test()");
         return "hello test";
     }
 }
