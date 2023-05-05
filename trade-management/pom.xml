@@ -9,39 +9,41 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github</groupId>
-    <artifactId>trade</artifactId>
+    <artifactId>trade-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>trade-dev</name>
-    <description>trade-dev</description>
+    <name>trade-management</name>
+    <description>trade-management</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
-    <packaging>pom</packaging>
-
-    <!-- 项目组成模块 -->
-    <modules>
-        <module>trade-goods</module>
-        <module>trade-order</module>
-        <module>trade-management</module>
-    </modules>
-
     <dependencies>
+        <!-- 商品模块 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.github</groupId>
+            <artifactId>trade-goods</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
 
+        <!-- spring 配置文件-->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 模板引擎 Thymeleaf 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
